@@ -10,7 +10,7 @@ rem echo ARE YOU SURE??
 rem echo.
 rem echo.
 rem pause
-rem call:cleanOldFolders
+call:cleanOldFolders
 
 call:checkGitInPath
 
@@ -59,7 +59,7 @@ REM ## featureA ##
 call:gitSwitchBranch %CLIENT1% featureA
 call:showStartRepoInfo %CLIENT1%
 
-pause
+rem pause
 
 :: EXIT
 goto:eof

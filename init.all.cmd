@@ -18,7 +18,7 @@ for /f "delims=" %%d in ('dir /a:d /b') do (
     echo Found init.cmd at: %%~fd\init.cmd
     cd /D %%~fd
     echo == Entering sub folder: %%~fd
-    start init.cmd
+    init.cmd
     echo == Exiting sub folder: %%~fd
     echo.
     cd ..

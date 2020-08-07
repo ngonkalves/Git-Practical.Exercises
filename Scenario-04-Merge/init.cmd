@@ -10,7 +10,7 @@ rem echo ARE YOU SURE??
 rem echo.
 rem echo.
 rem pause
-rem call:cleanOldFolders
+call:cleanOldFolders
 
 call:checkGitInPath
 
@@ -57,7 +57,7 @@ call:gitCommitAndPush %CLIENT1% master "C6" C6.txt "C6"
 REM call:gitResetBack %CLIENT1% 1
 call:showStartRepoInfo %CLIENT1%
 
-pause
+rem pause
 
 :: EXIT
 goto:eof
