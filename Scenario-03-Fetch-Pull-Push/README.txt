@@ -1,25 +1,20 @@
+Pull - Merge
+======================================================================
+# pull is configured for merge in .git/config file
+[pull]
+	rebase = false
 
-Steps:
-1) Goto client2 and pull from remote using merge
-2) Look at the log to see the created merge commit
-3) Run clean.cmd
-4) Run init.cmd
-5) Goto client2 and pull from remote using rebase
-6) Look at the log to see that merge commit was not created
-
-
-Fetch - will update remote branch
+1) goto repository client2-pull-merge
+2) do a pull
+3) view log to see the automatically created merge commit
 
 
-Pull (merge) 
-    - will update remote branch (fetch)
-        - merge current branch into local branch (merge)
-        - update working directory
-    - additional merge commit
+Pull - Rebase
+======================================================================
+# pull is configured for rebase in .git/config file
+[pull]
+	rebase = true
 
-
-Pull (rebase) 
-    - will update remote branch (fetch)
-        - merge current branch into local branch (rebase)
-        - update working directory
-    - more clean, doesn't create
+1) goto repository client2-pull-rebase
+2) do a pull
+3) view log to see there's no merge commit which end up being much more clean

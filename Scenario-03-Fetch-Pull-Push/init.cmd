@@ -17,8 +17,8 @@ call:checkGitInPath
 SET REMOTE_REPONAME=remote-repository.git
 
 SET CLIENT1=client1
-SET CLIENT2=client2
-SET CLIENT3=client3
+SET CLIENT2=client2-pull-merge
+SET CLIENT3=client3-pull-rebase
 SET CLIENT4=client4
 SET CLIENT5=client5
 SET CLIENT6=client6
@@ -58,6 +58,11 @@ REM ================================== CLIENT 1 ================================
 REM ## featureA ##
 call:gitCommitAndPush %CLIENT1% featureA "C5" C5.txt "C5"
 call:gitCommitAndPush %CLIENT1% featureA "C6" C6.txt "C6"
+
+mkdir %CLIENT3%
+xcopy /h /e %CLIENT2% %CLIENT3%
+
+call:gitConfigPullRebase %CLIENT3%
 
 call:showStartRepoInfo %CLIENT1%
 
