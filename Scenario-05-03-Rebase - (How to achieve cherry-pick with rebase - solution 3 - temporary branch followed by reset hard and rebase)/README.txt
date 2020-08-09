@@ -1,11 +1,11 @@
-Solution: double rebase with temporary branch
+Solution: temporary branch followed by reset hard and rebase
 =========================================================
 1) Create a temporary local branch featureA-old.state on commit C3
 
 2) Make sure your HEAD is at local branch featureA
 
-2) Rebase local branch featureA onto local branch featureB skipping all local commits
+2) Reset hard local branch featureA to commit C6 (the one we want to pick)
 
-3) Rebase again local branch featureA onto local branch featureA-old.state picking the commit you want C6
+3) Rebase local featureA onto local featureA-old.state picking only commit C6
 
 4) There you go, you will have the C6 in your branch featureA
