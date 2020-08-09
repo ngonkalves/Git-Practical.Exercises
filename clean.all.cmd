@@ -22,4 +22,4 @@ for /f "delims=" %%d in ('dir /a:d /b') do (
   )
 )
 
-pause
+rem pause
