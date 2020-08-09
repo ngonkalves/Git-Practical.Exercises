@@ -1,7 +1,7 @@
 @echo off
 
 set current_dir=%~dp0%
-
+set "file=00-init.cmd"
 cd /D %current_dir%
 
 for /f "delims=" %%d in ('dir /a:d /b') do (
@@ -9,11 +9,11 @@ for /f "delims=" %%d in ('dir /a:d /b') do (
   if EXIST "%%~fd\.git" (
     echo Found git repo at: %%~fd
   )
-  if EXIST "%%~fd\init.cmd" (
-    echo Found init.cmd at: %%~fd\init.cmd
+  if EXIST "%%~fd\%file%" (
+    echo Found %file% at: %%~fd\%file%
     cd /D %%~fd
     echo == Entering sub folder: %%~fd
-    init.cmd
+    %file%
     echo == Exiting sub folder: %%~fd
     echo.
     cd ..
