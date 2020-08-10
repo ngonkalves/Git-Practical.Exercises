@@ -1,0 +1,1 @@
+call ../_operations.cmd cleanOldFolders

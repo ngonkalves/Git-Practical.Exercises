@@ -1,7 +1,7 @@
 @echo off
 
 set current_dir=%~dp0%
-set "file=00-init.cmd"
+set "file=_init.cmd"
 cd /D %current_dir%
 
 for /f "delims=" %%d in ('dir /a:d /b') do (
@@ -13,7 +13,10 @@ for /f "delims=" %%d in ('dir /a:d /b') do (
     echo Found %file% at: %%~fd\%file%
     cd /D %%~fd
     echo == Entering sub folder: %%~fd
-    %file%
+    FOR /D %%p IN ("*.*") DO (
+        echo removing directory: %%p 
+        rmdir %%p /s /q
+    )
     echo == Exiting sub folder: %%~fd
     echo.
     cd ..
