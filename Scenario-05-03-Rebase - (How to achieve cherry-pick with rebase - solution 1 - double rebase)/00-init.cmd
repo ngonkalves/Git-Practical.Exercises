@@ -2,21 +2,9 @@ call ../operations.cmd cleanOldFolders
 
 call ../operations.cmd checkGitInPath
 
-SET REMOTE_REPONAME=remote-repository.git
-
 SET CLIENT1=client1
-SET CLIENT2=client2
-SET CLIENT3=client3
-SET CLIENT4=client4
-SET CLIENT5=client5
-SET CLIENT6=client6
-
 SET CLIENT_USER1=client1
-SET CLIENT_USER2=client2
-SET CLIENT_USER3=client3
-SET CLIENT_USER4=client4
-SET CLIENT_USER5=client5
-SET CLIENT_USER6=client6
+SET REMOTE_REPONAME=remote-repository.git
 
 call ../operations.cmd gitInitBare %REMOTE_REPONAME%
 
